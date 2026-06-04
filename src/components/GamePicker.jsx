@@ -118,6 +118,13 @@ const GAMES = [
     description: 'Slide & merge tiles to reach the 2048 tile',
     color: '#f65e3b',
   },
+  {
+    id: 'buttonblitz',
+    emoji: '👆',
+    name: 'Button Blitz',
+    description: 'Click the big button as fast as you can in 10 seconds',
+    color: '#ff6b6b',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
