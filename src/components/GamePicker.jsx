@@ -118,6 +118,13 @@ const GAMES = [
     description: 'Slide & merge tiles to reach the 2048 tile',
     color: '#f65e3b',
   },
+  {
+    id: 'tictactoe',
+    emoji: '⭕',
+    name: 'Tic Tac Toe',
+    description: 'Challenge the AI in a classic game',
+    color: '#0a84ff',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
