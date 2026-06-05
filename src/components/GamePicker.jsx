@@ -125,6 +125,13 @@ const GAMES = [
     description: 'Challenge the AI in a classic game',
     color: '#0a84ff',
   },
+  {
+    id: 'flappybird',
+    emoji: '🐦',
+    name: 'Flappy Bird',
+    description: 'Flap through the pipes and beat your high score',
+    color: '#FFD700',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
