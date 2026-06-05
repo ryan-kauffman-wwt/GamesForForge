@@ -125,6 +125,13 @@ const GAMES = [
     description: 'Challenge the AI in a classic game',
     color: '#0a84ff',
   },
+  {
+    id: 'clicker',
+    emoji: '🖱️',
+    name: 'Clicker',
+    description: 'Click your way to millions — buy upgrades',
+    color: '#764ba2',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
