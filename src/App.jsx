@@ -21,6 +21,7 @@ import SnakeBoard from './components/snake/SnakeBoard'
 import SpellingBeeBoard from './components/spellingbee/SpellingBeeBoard'
 import Game2048Board from './components/game2048/Game2048Board'
 import TicTacToeBoard from './components/tictactoe/TicTacToeBoard'
+import FlappyBirdBoard from './components/flappybird/FlappyBirdBoard'
 import { puzzles } from './data/puzzles'
 
 const envIndex = parseInt(import.meta.env.VITE_PUZZLE_INDEX, 10)
@@ -98,6 +99,8 @@ function App() {
           <Game2048Board key={`2048-${gameKey}`} />
         ) : activeGame === 'tictactoe' ? (
           <TicTacToeBoard key={`tictactoe-${gameKey}`} />
+        ) : activeGame === 'flappybird' ? (
+          <FlappyBirdBoard key={`flappybird-${gameKey}`} />
         ) : (
           <SudokuBoard key={`sudoku-${gameKey}`} />
         )}
