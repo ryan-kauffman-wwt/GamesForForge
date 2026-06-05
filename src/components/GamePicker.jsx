@@ -125,6 +125,13 @@ const GAMES = [
     description: 'Challenge the AI in a classic game',
     color: '#0a84ff',
   },
+  {
+    id: 'rpsls',
+    emoji: '🖖',
+    name: 'Rock Paper Scissors',
+    description: 'Lizard Spock — 5-way showdown against the CPU',
+    color: '#bf5af2',
+  },
 ]
 
 export default function GamePicker({ onGameSelect }) {
