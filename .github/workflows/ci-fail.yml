@@ -1,0 +1,12 @@
+name: CI Fail
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Fail intentionally
+      run: exit 1
