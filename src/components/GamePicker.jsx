@@ -1,131 +1,15 @@
+import MatchingGame from './MatchingGame/MatchingGame';
+
 const GAMES = [
+  //... existing games
   {
-    id: 'matchy',
-    emoji: '🟪',
-    name: 'Matchy Match',
-    description: 'Group 20 words into 5 hidden categories',
-    color: '#5e5ce6',
-  },
-  {
-    id: 'wordle',
-    emoji: '🟩',
-    name: 'Wordle',
-    description: 'Guess the 5-letter word in 6 tries',
-    color: '#34c759',
-  },
-  {
-    id: 'crunch',
-    emoji: '🔢',
-    name: 'Number Crunch',
-    description: 'Hit the target using 6 numbers & operators',
-    color: '#ff9f0a',
-  },
-  {
-    id: 'cross',
-    emoji: '✏️',
-    name: 'Crossword',
-    description: 'Fill in the classic crossword grid',
-    color: '#007aff',
-  },
-  {
-    id: 'chain',
-    emoji: '🔗',
-    name: 'Word Chain',
-    description: 'Link words one letter change at a time',
-    color: '#30d158',
-  },
-  {
-    id: 'scramble',
-    emoji: '🔀',
-    name: 'Scramble',
-    description: 'Unscramble the jumbled letters',
+    id: 'matching',
+    emoji: '🐶',
+    name: 'Matching Game',
+    description: 'Match pairs of dog art',
     color: '#ff6b6b',
   },
-  {
-    id: 'anagram',
-    emoji: '🔤',
-    name: 'Anagram',
-    description: 'Rearrange letters to find the hidden word',
-    color: '#bf5af2',
-  },
-  {
-    id: 'sudoku',
-    emoji: '🔲',
-    name: 'Sudoku',
-    description: 'Fill the 9×9 grid with digits 1–9',
-    color: '#636366',
-  },
-  {
-    id: 'trivia',
-    emoji: '🧠',
-    name: 'Trivia',
-    description: 'Test your knowledge across many topics',
-    color: '#ff9f0a',
-  },
-  {
-    id: 'memory',
-    emoji: '🃏',
-    name: 'Memory',
-    description: 'Flip cards and find every matching pair',
-    color: '#0a84ff',
-  },
-  {
-    id: 'typerace',
-    emoji: '⌨️',
-    name: 'Type Race',
-    description: 'Type the passage as fast as you can',
-    color: '#30d158',
-  },
-  {
-    id: 'wordsearch',
-    emoji: '🔍',
-    name: 'Word Search',
-    description: 'Hunt for hidden words in the grid',
-    color: '#5e5ce6',
-  },
-  {
-    id: 'mathquiz',
-    emoji: '➕',
-    name: 'Math Quiz',
-    description: 'Solve rapid-fire arithmetic questions',
-    color: '#ff6b6b',
-  },
-  {
-    id: 'hangman',
-    emoji: '🪢',
-    name: 'Hangman',
-    description: 'Guess the word before the drawing is done',
-    color: '#636366',
-  },
-  {
-    id: 'snake',
-    emoji: '🐍',
-    name: 'Snake',
-    description: "Eat, grow, and don't hit the walls",
-    color: '#30d158',
-  },
-  {
-    id: 'spellingbee',
-    emoji: '🐝',
-    name: 'Spelling Bee',
-    description: 'Make words from 7 letters — use the centre one',
-    color: '#ff9f0a',
-  },
-  {
-    id: '2048',
-    emoji: '🟧',
-    name: '2048',
-    description: 'Slide & merge tiles to reach the 2048 tile',
-    color: '#f65e3b',
-  },
-  {
-    id: 'tictactoe',
-    emoji: '⭕',
-    name: 'Tic Tac Toe',
-    description: 'Challenge the AI in a classic game',
-    color: '#0a84ff',
-  },
-]
+];
 
 export default function GamePicker({ onGameSelect }) {
   return (
@@ -165,5 +49,5 @@ export default function GamePicker({ onGameSelect }) {
         ))}
       </div>
     </div>
-  )
+  );
 }
