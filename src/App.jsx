@@ -12,7 +12,7 @@ import ScrambleBoard from './components/scramble/ScrambleBoard'
 import AnagramBoard from './components/anagram/AnagramBoard'
 import SudokuBoard from './components/sudoku/SudokuBoard'
 import TriviaBoard from './components/trivia/TriviaBoard'
-import MemoryBoard from './components/memory/MemoryBoard'
+import MemoryGame from './components/MemoryGame/MemoryGame'
 import TypeRaceBoard from './components/typerace/TypeRaceBoard'
 import WordSearchBoard from './components/wordsearch/WordSearchBoard'
 import MathQuizBoard from './components/mathquiz/MathQuizBoard'
@@ -26,7 +26,7 @@ import { puzzles } from './data/puzzles'
 const envIndex = parseInt(import.meta.env.VITE_PUZZLE_INDEX, 10)
 const PUZZLE_INDEX =
   Number.isFinite(envIndex) && envIndex >= 0 && envIndex < puzzles.length
-    ? envIndex
+   ? envIndex
     : 0
 
 function App() {
@@ -58,45 +58,45 @@ function App() {
         onToggleDark={toggleDark}
       />
       <main className="flex-1 flex flex-col items-center pt-6 pb-10 px-4 sm:px-6">
-        {!activeGame ? (
+        {!activeGame? (
           <GamePicker onGameSelect={handleGameSelect} />
-        ) : activeGame === 'matchy' ? (
+        ) : activeGame === 'matchy'? (
           <GameBoard
             key={`matchy-${gameKey}`}
             puzzle={puzzles[PUZZLE_INDEX]}
             onNewGame={handleNewGame}
           />
-        ) : activeGame === 'wordle' ? (
+        ) : activeGame === 'wordle'? (
           <WordleBoard key={`wordle-${gameKey}`} />
-        ) : activeGame === 'crunch' ? (
+        ) : activeGame === 'crunch'? (
           <NumberCrunchBoard key={`crunch-${gameKey}`} />
-        ) : activeGame === 'cross' ? (
+        ) : activeGame === 'cross'? (
           <CrosswordBoard key={`cross-${gameKey}`} />
-        ) : activeGame === 'chain' ? (
+        ) : activeGame === 'chain'? (
           <WordChainBoard key={`chain-${gameKey}`} />
-        ) : activeGame === 'scramble' ? (
+        ) : activeGame === 'scramble'? (
           <ScrambleBoard key={`scramble-${gameKey}`} />
-        ) : activeGame === 'anagram' ? (
+        ) : activeGame === 'anagram'? (
           <AnagramBoard key={`anagram-${gameKey}`} />
-        ) : activeGame === 'trivia' ? (
+        ) : activeGame === 'trivia'? (
           <TriviaBoard key={`trivia-${gameKey}`} />
-        ) : activeGame === 'memory' ? (
-          <MemoryBoard key={`memory-${gameKey}`} />
-        ) : activeGame === 'typerace' ? (
+        ) : activeGame === 'memory'? (
+          <MemoryGame key={`memory-${gameKey}`} />
+        ) : activeGame === 'typerace'? (
           <TypeRaceBoard key={`typerace-${gameKey}`} />
-        ) : activeGame === 'wordsearch' ? (
+        ) : activeGame === 'wordsearch'? (
           <WordSearchBoard key={`wordsearch-${gameKey}`} />
-        ) : activeGame === 'mathquiz' ? (
+        ) : activeGame === 'mathquiz'? (
           <MathQuizBoard key={`mathquiz-${gameKey}`} />
-        ) : activeGame === 'hangman' ? (
+        ) : activeGame === 'hangman'? (
           <HangmanBoard key={`hangman-${gameKey}`} />
-        ) : activeGame === 'snake' ? (
+        ) : activeGame === 'snake'? (
           <SnakeBoard key={`snake-${gameKey}`} dark={dark} />
-        ) : activeGame === 'spellingbee' ? (
+        ) : activeGame === 'spellingbee'? (
           <SpellingBeeBoard key={`spellingbee-${gameKey}`} />
-        ) : activeGame === '2048' ? (
+        ) : activeGame === '2048'? (
           <Game2048Board key={`2048-${gameKey}`} />
-        ) : activeGame === 'tictactoe' ? (
+        ) : activeGame === 'tictactoe'? (
           <TicTacToeBoard key={`tictactoe-${gameKey}`} />
         ) : (
           <SudokuBoard key={`sudoku-${gameKey}`} />
