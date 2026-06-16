@@ -1,0 +1,90 @@
+const WORDS = [
+  'apple', 'brave', 'crane', 'drive', 'eagle',
+  'flame', 'grace', 'haste', 'ivory', 'joker',
+  'kneel', 'lemon', 'maple', 'nerve', 'ocean',
+  'plant', 'queen', 'river', 'stone', 'tiger',
+  'ultra', 'vivid', 'witch', 'xenon', 'yacht',
+  'zebra', 'angel', 'beach', 'chess', 'dance',
+  'earth', 'fairy', 'globe', 'heart', 'image',
+  'jewel', 'knife', 'light', 'music', 'night',
+  'orbit', 'peace', 'quest', 'radar', 'smile',
+  'table', 'unity', 'voice', 'water', 'youth',
+];
+
+const MAX_ATTEMPTS = 6;
+
+/**
+ * Initialize a new Wordle game.
+ * @returns {{ word: string, attempts: number, ended: boolean, guesses: string[] }}
+ */
+export function initializeGame() {
+  const word = WORDS[Math.floor(Math.random() * WORDS.length)];
+  return {
+    word,
+    attempts: 0,
+    ended: false,
+    guesses: [],
+  };
+}
+
+/**
+ * Make a guess in the given game.
+ * Mutates game state (attempts, ended, guesses).
+ *
+ * @param {{ word: string, attempts: number, ended: boolean, guesses: string[] }} game
+ * @param {string} guess - The guessed word.
+ * @returns {Array<{ letter: string, status: 'correct' | 'present' | 'absent' }> | null}
+ *   Returns null if the game has already ended.
+ */
+export function makeGuess(game, guess) {
+  if (game.ended) {
+    return null;
+  }
+
+  game.attempts += 1;
+  game.guesses.push(guess);
+
+  const result = evaluateGuess(game.word, guess);
+
+  const isCorrect = result.every((r) => r.status === 'correct');
+  if (isCorrect || game.attempts >= MAX_ATTEMPTS) {
+    game.ended = true;
+  }
+
+  return result;
+}
+
+/**
+ * Evaluate a guess against the target word.
+ * Returns per-letter feedback.
+ *
+ * @param {string} word   - The secret word.
+ * @param {string} guess  - The player's guess.
+ * @returns {Array<{ letter: string, status: 'correct' | 'present' | 'absent' }>}
+ */
+function evaluateGuess(word, guess) {
+  const wordLetters = word.toLowerCase().split('');
+  const guessLetters = guess.toLowerCase().split('');
+  const result = guessLetters.map((letter) => ({ letter, status: 'absent' }));
+
+  // First pass: mark correct positions
+  const remainingWord = [...wordLetters];
+  for (let i = 0; i < guessLetters.length; i++) {
+    if (guessLetters[i] === wordLetters[i]) {
+      result[i].status = 'correct';
+      remainingWord[i] = null; // consume this letter
+    }
+  }
+
+  // Second pass: mark present (wrong position) letters
+  for (let i = 0; i < guessLetters.length; i++) {
+    if (result[i].status === 'correct') continue;
+    const idx = remainingWord.indexOf(guessLetters[i]);
+    if (idx !== -1) {
+      result[i].status = 'present';
+      remainingWord[idx] = null; // consume this letter
+    }
+  }
+
+  return result;
+}

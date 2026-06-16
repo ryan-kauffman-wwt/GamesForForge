@@ -4,11 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "node /workspace/.npm-cache/_npx/15bd4bb29a014110/node_modules/jest/bin/jest.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/jest.transform.js"
+    },
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/src/__tests__/**/*.test.js",
+      "**/src/__tests__/**/*.test.jsx"
+    ]
   }
 }

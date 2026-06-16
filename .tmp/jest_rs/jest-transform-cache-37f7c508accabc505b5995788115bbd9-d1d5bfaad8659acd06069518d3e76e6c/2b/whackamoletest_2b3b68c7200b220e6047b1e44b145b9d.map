@@ -1,0 +1,1 @@
+{"version":3,"names":["test","expect","WhackAMole","toBe"],"sources":["whack-a-mole.test.js"],"sourcesContent":["test('Whack-a-Mole game should be defined', () => {\n  expect(typeof WhackAMole).toBe('function');\n});"],"mappings":"AAAAA,IAAI,CAAC,qCAAqC,EAAE,MAAM;EAChDC,MAAM,CAAC,OAAOC,UAAU,CAAC,CAACC,IAAI,CAAC,UAAU,CAAC;AAC5C,CAAC,CAAC","ignoreList":[]}
