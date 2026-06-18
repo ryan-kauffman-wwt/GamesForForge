@@ -7,6 +7,7 @@ const config = {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': '<rootDir>/__mocks__/styleMock.js',
   },
+  setupFiles: ['<rootDir>/jest.globals.js'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironmentOptions: {
     customExportConditions: [''],
