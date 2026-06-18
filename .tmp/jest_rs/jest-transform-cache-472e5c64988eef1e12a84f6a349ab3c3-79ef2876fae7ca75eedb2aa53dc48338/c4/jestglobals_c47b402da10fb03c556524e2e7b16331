@@ -1,0 +1,6 @@
+681d588d0007be50be43e2eab66ebc23
+"use strict";
+
+// Expose WhackAMole as a global so the whack-a-mole test can use it without an import.
+global.WhackAMole = require('./whack-a-mole/whack-a-mole');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJnbG9iYWwiLCJXaGFja0FNb2xlIiwicmVxdWlyZSJdLCJzb3VyY2VzIjpbImplc3QuZ2xvYmFscy5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvc2UgV2hhY2tBTW9sZSBhcyBhIGdsb2JhbCBzbyB0aGUgd2hhY2stYS1tb2xlIHRlc3QgY2FuIHVzZSBpdCB3aXRob3V0IGFuIGltcG9ydC5cbmdsb2JhbC5XaGFja0FNb2xlID0gcmVxdWlyZSgnLi93aGFjay1hLW1vbGUvd2hhY2stYS1tb2xlJyk7XG4iXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQUEsTUFBTSxDQUFDQyxVQUFVLEdBQUdDLE9BQU8sQ0FBQyw2QkFBNkIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

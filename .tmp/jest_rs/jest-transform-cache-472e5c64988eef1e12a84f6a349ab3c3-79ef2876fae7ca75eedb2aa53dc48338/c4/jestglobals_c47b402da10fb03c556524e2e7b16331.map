@@ -1,0 +1,1 @@
+{"version":3,"names":["global","WhackAMole","require"],"sources":["jest.globals.js"],"sourcesContent":["// Expose WhackAMole as a global so the whack-a-mole test can use it without an import.\nglobal.WhackAMole = require('./whack-a-mole/whack-a-mole');\n"],"mappings":";;AAAA;AACAA,MAAM,CAACC,UAAU,GAAGC,OAAO,CAAC,6BAA6B,CAAC","ignoreList":[]}
