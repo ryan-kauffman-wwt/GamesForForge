@@ -1,0 +1,6 @@
+346b15e493125d903976c61e16c30e97
+"use strict";
+
+require("@testing-library/jest-dom");
+process.env.NODE_ENV = 'development';
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZXF1aXJlIiwicHJvY2VzcyIsImVudiIsIk5PREVfRU5WIl0sInNvdXJjZXMiOlsiamVzdC5zZXR1cC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJwcm9jZXNzLmVudi5OT0RFX0VOViA9ICdkZXZlbG9wbWVudCc7XG5pbXBvcnQgJ0B0ZXN0aW5nLWxpYnJhcnkvamVzdC1kb20nO1xuIl0sIm1hcHBpbmdzIjoiOztBQUNBQSxPQUFBO0FBREFDLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDQyxRQUFRLEdBQUcsYUFBYSIsImlnbm9yZUxpc3QiOltdfQ==
